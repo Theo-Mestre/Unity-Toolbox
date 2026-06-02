@@ -1,0 +1,12 @@
+Event Dispatch Log - 09/03/2026 17:25:47
+----------------------------------------
+--- Frame 1 ---------------
+Time: 2,725204 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Middle Of Summer-Gregory David }
+--- Frame 215 ---------------
+Time: 4,093229 | Event: TransitionReachedApex | Bindings : 0
+--- Frame 13748 ---------------
+Time: 39,37069 | Event: OnPlayerProfilesEdited | Bindings : 2
+--- Frame 14484 ---------------
+Time: 41,52676 | Event: OnPlayerProfilesEdited | Bindings : 2
+--- Frame 15041 ---------------
+Time: 43,0631 | Event: OnGameQuit | Bindings : 3

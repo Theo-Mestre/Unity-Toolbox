@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a3c1b29bddeb14ea1bef7aec1891bd, type: 3}
+  m_Name: EditorWindowTemplate
+  m_EditorClassIdentifier: 
+  templateName: Editor Window
+  templateContent: "using UnityEditor;\r\nusing UnityEngine;\r\n\r\npublic class
+    {ClassName} : EditorWindow\r\n{\r\n    [MenuItem(\"Tools/{ClassName}\")]\r\n   
+    public static void ShowWindow()\r\n    {\r\n        {ClassName} window = GetWindow<{ClassName}>();\r\n       
+    window.titleContent = new GUIContent(\"{ClassName}\");\r\n        window.Show();\r\n   
+    }\r\n\r\n    private void OnGUI()\r\n    {\r\n        // Add GUI elements here\r\n       
+    GUILayout.Label(\"{ClassName}\", EditorStyles.boldLabel);\r\n    }\r\n}\r\n"
+  description: An empty Editor window script

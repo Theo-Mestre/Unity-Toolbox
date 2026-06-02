@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a3c1b29bddeb14ea1bef7aec1891bd, type: 3}
+  m_Name: MonoBehaviourSingletonTemplate
+  m_EditorClassIdentifier: 
+  templateName: Monobehaviour Singleton
+  templateContent: "using UnityEngine;\r\n\r\npublic class {ClassName} : MonoBehaviour\r\n{\r\n   
+    // {ClassName} instance reference\r\n    private static {ClassName} instance;\r\n\r\n   
+    // {ClassName} instance property\r\n    public static {ClassName} Instance\r\n   
+    {\r\n        get\r\n        {\r\n            if (instance == null)\r\n           
+    {\r\n#if UNITY_2023_1_OR_NEWER\r\n                instance = FindFirstObjectByType<{ClassName}>();\r\n#else\r\n               
+    instance = FindObjectOfType<{ClassName}>();\r\n#endif\r\n                if (instance
+    == null)\r\n                {\r\n                    var obj = new GameObject(nameof({ClassName}));\r\n                   
+    instance = obj.AddComponent<{ClassName}>();\r\n                }\r\n\r\n               
+    DontDestroyOnLoad(instance.gameObject);\r\n                instance.Init();\r\n           
+    }\r\n\r\n            return instance;\r\n        }\r\n    }\r\n\r\n    public
+    static bool IsValid()\r\n    {\r\n        return instance != null;\r\n    }\r\n\r\n   
+    private void Awake()\r\n    {\r\n        if (instance != null && instance !=
+    this)\r\n        {\r\n            Debug.LogWarning(\"Destroying duplicate instance
+    of {ClassName}.\");\r\n            Destroy(gameObject);\r\n            return;\r\n       
+    }\r\n\r\n        instance = this;\r\n        DontDestroyOnLoad(gameObject);\r\n       
+    Init();\r\n    }\r\n\r\n    private void OnDestroy()\r\n    {\r\n        if (instance
+    == this)\r\n        {\r\n            Shutdown();\r\n            instance = null;\r\n       
+    }\r\n    }\r\n\r\n    protected virtual void Init()\r\n    {\r\n        // Initialization
+    logic here\r\n    }\r\n\r\n    protected virtual void Shutdown()\r\n    {\r\n       
+    // Cleanup logic here\r\n    }\r\n}\r\n"
+  description: A Monobehaviour Singleton Object
