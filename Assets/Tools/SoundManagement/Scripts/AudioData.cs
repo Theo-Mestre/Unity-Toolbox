@@ -22,12 +22,12 @@ public class AudioData : ScriptableObject
         [Range(0f, 1f)] public float Volume = 0.5f;
     }
 
-    [Header("Sound Banks")]
+    // Sounds
     public SoundBank[] SoundBanks;
 
-    [Header("Music")]
+    // Music
     public MusicTrack[] Playlist;
     [Range(0f, 1f)] public float GlobalMusicVolume = 0.5f;
-    public bool startMusicOnAwake = true;
+    public bool AutoStartMusic = true;
     public bool ShuffleMusic = false;
 }

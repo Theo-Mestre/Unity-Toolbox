@@ -3,7 +3,7 @@ using UnityEngine;
 using Utilities;
 using Random = UnityEngine.Random;
 
-public class AudioManager : MonoBehaviour
+public partial class AudioManager : MonoBehaviour
 {
     #region Singleton Implementation
     private static AudioManager instance;
@@ -67,6 +67,7 @@ public class AudioManager : MonoBehaviour
     private readonly Stack<int> trackHistory = new();
     private int currentTrackIndex = 0;
     private float sfxVolume = 0.7f;
+    private bool isPlaying = false;
 
     // Audio Emitters
     private AudioSource sfxSource;
@@ -80,19 +81,14 @@ public class AudioManager : MonoBehaviour
     {
         SetupAudioSources();
         BuildBankMap();
+
+        isPlaying = audioData.AutoStartMusic;
     }
 
     protected virtual void Shutdown()
     {
         sfxSource.Stop();
         musicSource.Stop();
-    }
-
-    void Start()
-    {
-        if (audioData.startMusicOnAwake &&
-            audioData?.Playlist?.Length > 0)
-            PlayNextTrack();
     }
 
     void Update()
@@ -104,7 +100,7 @@ public class AudioManager : MonoBehaviour
             else PlayNextTrack();
         }
 #endif
-        if (musicSource != null && !musicSource.isPlaying && audioData?.Playlist?.Length > 0)
+        if (isPlaying && musicSource != null && !musicSource.isPlaying)
             PlayNextTrack();
     }
 
@@ -169,7 +165,12 @@ public class AudioManager : MonoBehaviour
         sfxVolume = Mathf.Clamp01(volume);
     }
 
-    public void StopMusic() => musicSource.Stop();
+    public void StopMusic()
+    {
+        isPlaying = false;
+        musicSource.Stop();
+    }
+        
     public void SkipTrack() => PlayNextTrack();
     public void PreviousTrack() => PlayPreviousTrack();
 
@@ -201,6 +202,7 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = track.Clip;
         musicSource.volume = track.Volume * audioData.GlobalMusicVolume; // blend per-track + global
         musicSource.Play();
+        isPlaying = true;
         EventDispatcher.Broadcast(Events.OnAudioChanged, new("AudioName", track.Title));
     }
     #endregion

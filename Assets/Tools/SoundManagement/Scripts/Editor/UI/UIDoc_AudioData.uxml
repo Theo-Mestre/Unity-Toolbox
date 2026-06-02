@@ -1,0 +1,19 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="root" style="flex-grow: 1;">
+        <ui:VisualElement name="Title" style="flex-grow: 0; flex-direction: row;">
+            <ui:Label text="AudioData Editor" style="flex-grow: 1; -unity-text-align: middle-center; margin-top: 16px; margin-bottom: 16px; margin-right: 2px; margin-left: 2px; -unity-font-style: bold; color: rgb(224, 224, 224); font-size: 32px;"/>
+        </ui:VisualElement>
+        <ui:Label text="SFX" name="SFXTitle" style="color: rgb(224, 224, 224); -unity-font-style: bold; font-size: 20px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;"/>
+        <uie:PropertyField name="Soundbanks" binding-path="SoundBanks" style="color: rgb(241, 241, 241); margin-top: 0; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+        <ui:Button text="Create SFX Player Methods" name="CreateSFXPlayerMethodsButton" style="padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px; font-size: 24px; -unity-font-style: bold; text-overflow: clip;"/>
+        <ui:VisualElement name="Spacing" style="flex-grow: 0; height: 24px;"/>
+        <ui:Label text="Musics" name="SFXTitle" style="color: rgb(224, 224, 224); -unity-font-style: bold; font-size: 20px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;"/>
+        <uie:PropertyField name="Playlist" binding-path="Playlist" style="color: rgb(241, 241, 241); margin-top: 0; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+        <ui:VisualElement name="GlobalVolume" style="flex-grow: 0; flex-direction: row; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 0;">
+            <ui:FloatField label="Global Music Volume" value="188.4" max-length="5" name="GlobalVolumeFloatField" binding-path="GlobalMusicVolume" style="width: 170px; -unity-text-align: middle-left;"/>
+            <ui:Slider value="42" high-value="1" name="GlobalVolumeSlider" binding-path="GlobalMusicVolume" style="flex-grow: 1; margin-left: 10px; margin-right: 4px;"/>
+        </ui:VisualElement>
+        <ui:Toggle label="Auto Start Music" name="AutoStartMusicToggle" binding-path="AutoStartMusic" style="flex-grow: 0; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 4px;"/>
+        <ui:Toggle label="Shuffle Music" name="ShuffleMusicToggle" binding-path="ShuffleMusic" style="flex-grow: 0; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 4px;"/>
+    </ui:VisualElement>
+</ui:UXML>

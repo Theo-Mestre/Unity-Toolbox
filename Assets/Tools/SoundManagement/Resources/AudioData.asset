@@ -23,10 +23,20 @@ MonoBehaviour:
     Volume: 0.5
     applyRandomPitch: 1
     PitchVariation: 1
+  - Name: UUU
+    Clips:
+    - {fileID: 8300000, guid: ba22cc81b1b50b947b5b7bfbc1592715, type: 3}
+    - {fileID: 8300000, guid: a47849528c0df154ba75e2b88f105ca7, type: 3}
+    - {fileID: 8300000, guid: 5e9152203f7aea94fb75d9372e4c97e6, type: 3}
+    - {fileID: 8300000, guid: 0348109223870e146b7fc4586672fb6d, type: 3}
+    - {fileID: 8300000, guid: fafabd6d6e6507845ad7fddec15ca9dc, type: 3}
+    Volume: 0.5
+    applyRandomPitch: 1
+    PitchVariation: 1
   Playlist:
   - Title: Floof-Jobii
     Clip: {fileID: 8300000, guid: 3d6fcc4ae84d8c245b143d5a624adaf4, type: 3}
     Volume: 0.5
-  GlobalMusicVolume: 0.7
-  startMusicOnAwake: 0
+  GlobalMusicVolume: 0.5
+  AutoStartMusic: 1
   ShuffleMusic: 0
