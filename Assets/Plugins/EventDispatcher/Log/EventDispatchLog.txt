@@ -1,24 +1,10 @@
-Event Dispatch Log - 6/2/2026 4:26:28 PM
+Event Dispatch Log - 6/2/2026 6:26:57 PM
 ----------------------------------------
---- Frame 112 ---------------
-Time: 4.163624 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Darude - Sandstorm }
---- Frame 1153 ---------------
-Time: 7.300954 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Example }
---- Frame 1326 ---------------
-Time: 7.840329 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Darude - Sandstorm }
---- Frame 1942 ---------------
-Time: 9.619171 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Example }
---- Frame 2117 ---------------
-Time: 10.15813 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Darude - Sandstorm }
---- Frame 2816 ---------------
-Time: 12.19649 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Example }
---- Frame 3011 ---------------
-Time: 12.85913 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Combo - VintageScore }
---- Frame 3793 ---------------
-Time: 15.11393 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Example }
---- Frame 4037 ---------------
-Time: 15.91992 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Darude - Sandstorm }
---- Frame 4612 ---------------
-Time: 17.7062 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Example }
---- Frame 4782 ---------------
-Time: 18.23038 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Combo - VintageScore }
+--- Frame 10255 ---------------
+Time: 33.06655 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Example }
+--- Frame 11467 ---------------
+Time: 36.82881 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Darude - Sandstorm }
+--- Frame 13540 ---------------
+Time: 42.66459 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Combo - VintageScore }
+--- Frame 17262 ---------------
+Time: 53.00972 | Event: OnAudioChanged | Bindings : 0 | Params: ParamList { AudioName: Darude - Sandstorm }
